@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { ConfigProvider, Icon, Spin } from 'antd';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './reduxStore/store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+    <ConfigProvider >
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ConfigProvider>
+,
   document.getElementById('root')
 );
 
