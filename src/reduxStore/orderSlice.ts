@@ -31,7 +31,6 @@ export const  incrementAsync =   (params: any): AppThunk => async dispatch => {
     }).then((response: Response) => response.json())
     // state.demoData = result;
     console.log(result)   
-
   };
 
 const { actions, reducer } = myOrderSlice;
